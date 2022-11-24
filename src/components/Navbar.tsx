@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
-    return <div className="navbar bg-base-100 shadow-lg">
+    return <div className="navbar bg-base-100 shadow-lg gap-2">
         <div className="flex-1">
             <Link to={'/'} className="btn btn-ghost normal-case text-xl">Ratiscrum</Link>
         </div>
         <div className="flex-none">
             <ul className="menu menu-horizontal p-0">
-                <li><Link to={'contact/'}>Contact</Link></li>
+                <li><Link className="btn btn-ghost rounded-md" to={'contact/'}>Contact</Link></li>
             </ul>
         </div>
         <div className="flex-none gap-2">
