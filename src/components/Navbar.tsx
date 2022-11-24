@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
-    return <div className="navbar bg-base-100 shadow-lg gap-2">
+    return <div className="navbar bg-base-100 drop-shadow-sm gap-2">
         <div className="flex-1">
-            <Link to={'/'} className="btn btn-ghost normal-case text-xl">Ratiscrum</Link>
+            <Link to={'/'} className="btn btn-ghost normal-case text-xl text-indigo-500">Ratiscrum</Link>
         </div>
         <div className="flex-none">
             <ul className="menu menu-horizontal p-0">

@@ -2,10 +2,10 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 export default function App() {
 
-  return <div>
+  return <div className="bg-gray-100 h-screen">
     <Navbar />
 
-    <div className="container mx-auto py-5">
+    <div className="container mx-auto my-10">
 
       <Outlet />
 
