@@ -1,11 +1,15 @@
-import { Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import { Link, Outlet } from "react-router-dom";
+import Logo from './images/Ratisexe-logo.png'
+
 export default function App() {
 
-  return <div className="bg-gray-100 h-screen">
-    <Navbar />
+  return <div className="h-screen">
 
-    <div className="container mx-auto my-10">
+    <Link to={'/'} className="absolute top-4 left-4 btn btn-ghost">
+      <img src={Logo} width={150}></img>
+    </Link>
+
+    <div className="container mx-auto my-20">
 
       <Outlet />
 
