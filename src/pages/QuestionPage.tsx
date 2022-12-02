@@ -21,7 +21,6 @@ export function QuestionPage({ question, onChoice }: { question: Question, onCho
     return <div className="flex flex-col px-4 pb-1 gap-10 w-full h-full lg:my-10 mx-5 lg:mx-0 overflow-y-auto">
 
         <div className="grow flex justify-center items-center">
-            {/* TODO : Implement days */}
             <DayLabel day={1}></DayLabel>
         </div>
 
