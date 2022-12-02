@@ -10,11 +10,9 @@ import { Side } from "../models/side.enum";
 export function QuestionPage({ question, onChoice }: { question: Question, onChoice: (choice: Choice) => void }) {
     const onSwipe = (direction: any) => {      
         if(direction === 'left') {
-            console.log("left")
             onChoice(question.choices[0]);
         }
         if(direction === 'right') {
-            console.log("right")
             onChoice(question.choices[1]);
         }
     }
