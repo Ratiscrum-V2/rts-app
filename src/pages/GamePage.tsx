@@ -42,8 +42,11 @@ export default function GamePage(): JSX.Element {
     // const question = exampleQuestion;
 
     const pickRandomQuestion = () => {
+        console.log("already", alreadyAnsweredQuestions.length);
+        console.log("total", questionsAPI.length);
         if(alreadyAnsweredQuestions.length >= questionsAPI.length) {
             setIsUserWinned(true);
+            return;
         }
         let newQuestionIdx = -1;
         do {
@@ -61,6 +64,7 @@ export default function GamePage(): JSX.Element {
         setIsGameOver(false);
         setIsResultPage(false);
         setIsUserWinned(false);
+        setAlreadyAnsweredQuestions([]);
         setDayCount(1);
     }
 
@@ -90,7 +94,7 @@ export default function GamePage(): JSX.Element {
         setDayCount(dayCount + 1);
     }
 
-    if(isGameOver) {
+    if(isGameOver || isUserWinned) {
         return <>
             <div className="hero">
                 <div className="hero-content text-center">
