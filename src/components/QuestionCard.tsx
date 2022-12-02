@@ -3,7 +3,7 @@ import Logo from '../images/Ratisexe-dark.png'
 
 export function QuestionCard({ question, className }: { question: Question, className: string }) {
 
-    return <div className={"card w-full lg:w-96 bg-base-content shadow-md hover:shadow-xl transform hover:scale-110 filter active:drop-shadow-2xl active:scale-125 select-none " + className}>
+    return <div className={"card w-full lg:w-96 bg-base-content shadow-md hover:shadow-xl transform hover:scale-105 filter active:drop-shadow-2xl active:scale-110 select-none transition " + className}>
         <figure className="p-3">
             <img src="https://placeimg.com/400/225/arch" className="rounded-xl pointer-events-none" />
         </figure>
