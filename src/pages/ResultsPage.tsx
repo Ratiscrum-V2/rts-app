@@ -5,7 +5,7 @@ import { indicators, Indicators } from "../models/indicators.enum";
 import { Question } from "../models/question";
 
 export function ResultsPage({ question, choice, onNextRound }: { question: Question, choice: Choice, onNextRound: () => void }) {
-    return <div className="grid grid-cols-2 gap-10 w-full h-full my-10">
+    return <div className="grid lg:grid-cols-2 gap-10 w-full h-full lg:my-10 lg:mx-0 px-4 pb-1 overflow-y-auto">
         <div className="flex flex-col gap-5 grow">
             <div className="flex gap-5 items-start content-center">
                 <DayLabel day={1}></DayLabel>

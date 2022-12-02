@@ -1,9 +1,9 @@
 import { Question } from "../models/question";
 import Logo from '../images/Ratisexe-dark.png'
 
-export function QuestionCard({ question }: { question: Question }) {
+export function QuestionCard({ question, className }: { question: Question, className: string }) {
 
-    return <div className="card w-96 bg-base-content shadow-2xl shadow-pink-500/50">
+    return <div className={"card w-full lg:w-96 bg-base-content shadow-2xl shadow-pink-500/50 " + className}>
         <figure className="p-3">
             <img src="https://placeimg.com/400/225/arch" className="rounded-xl" />
         </figure>
