@@ -32,6 +32,8 @@ export default function GamePage() {
 
     const [isGameOver, setIsGameOver] = useState(false);
 
+    const [isUserWinned, setIsUserWinned] = useState(false);
+
     const [alreadyAnsweredQuestions, setAlreadyAnsweredQuestions] = useState<number[]>([]);
 
     const [question, setQuestion] = useState<Question>(questionsAPI[0]);
@@ -40,10 +42,11 @@ export default function GamePage() {
     // const question = exampleQuestion;
 
     const pickRandomQuestion = () => {
-        console.log("pick random question")
+        if(alreadyAnsweredQuestions.length >= questionsAPI.length) {
+            setIsUserWinned(true);
+        }
         let newQuestionIdx = -1;
         do {
-            console.log("loop")
             newQuestionIdx = Math.floor(Math.random() * questionsAPI.length)
         } while(alreadyAnsweredQuestions.includes(newQuestionIdx) || newQuestionIdx < 0);
         setQuestion(questionsAPI[newQuestionIdx]);
@@ -57,12 +60,12 @@ export default function GamePage() {
         setPlayerIndicators(defaultIndicators);
         setIsGameOver(false);
         setIsResultPage(false);
+        setIsUserWinned(false);
         setDayCount(1);
     }
 
     const handleChoice = (choice: Choice) => {
         setLastChoice(choice);
-        console.log("handleChoice")
         const playerIndicatorTemp = playerIndicators;
         Object.values(choice.effects).forEach((effect, index) => {
             playerIndicatorTemp[index] = {
@@ -87,13 +90,13 @@ export default function GamePage() {
         setDayCount(dayCount + 1);
     }
 
-    if(isGameOver) {
+    if(isGameOver || isUserWinned) {
         return <>
             <div className="hero">
                 <div className="hero-content text-center">
                     <div className="max-w-md">
-                    <h1 className="text-5xl font-bold">Vous avez perdu au jour {dayCount} 🥹</h1>
-                    <p className="py-6">Essayez de mieux gérer vos choix la prochaine fois !</p>
+                    <h1 className="text-5xl font-bold">{isUserWinned ? `😎 Vous avez gagné` : `🥹 Vous avez perdu` } au jour {dayCount}</h1>
+                    <p className="py-6">{isUserWinned ? `N'hésitez pas à faire essayer le jeu à vos amis` : `Essayez de mieux gérer vos choix la prochaine fois !` }</p>
                     <button className="btn btn-primary" onClick={() => {restartGame()}}>Rejouer</button>
                     </div>
                 </div>
