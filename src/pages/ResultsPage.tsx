@@ -27,7 +27,7 @@ export function ResultsPage({ question, choice, onNextRound }: { question: Quest
                 <h6 className="uppercase text-lg font-bold opacity-50">Effets sur vos indicateurs</h6>
                 <div className="flex gap-8">
                     {indicators.map((indicator) => {
-                        return <div className="flex gap-2 items-center">
+                        return <div key={indicator} className="flex gap-2 items-center">
                             <IndicatorIcon indicator={indicator}></IndicatorIcon>
                             <p className="text-2xl font-bold">{choice.effects[indicator]}</p>
                         </div>
@@ -36,7 +36,7 @@ export function ResultsPage({ question, choice, onNextRound }: { question: Quest
             </section>
             <section className="flex flex-col gap-3">
                 <h6 className="uppercase text-lg font-bold opacity-50">Ce que les autres ont choisis</h6>
-                <div className="flex gap-2 items-center">
+                <div className="flex gap-4 items-center">
                     <p className="font-bold text-xl">60%</p>
                     <progress className="progress progress-secondary flex-1" value="60" max="100"></progress>
                     <p className="font-bold text-xl">30%</p>

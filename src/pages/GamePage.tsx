@@ -24,7 +24,7 @@ export default function GamePage() {
     return <>
         <div className="flex gap-3 items-center">
             {indicators.map((indicator) => {
-                return <IndicatorBar indicator={indicator} progress={70}></IndicatorBar>
+                return <IndicatorBar key={indicator} indicator={indicator} progress={70}></IndicatorBar>
             })}
         </div>
         {

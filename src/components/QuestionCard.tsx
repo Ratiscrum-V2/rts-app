@@ -3,7 +3,7 @@ import Logo from '../images/Ratisexe-dark.png'
 
 export function QuestionCard({ question }: { question: Question }) {
 
-    return <div className="card w-96 bg-base-content drop-shadow-xl">
+    return <div className="card w-96 bg-base-content shadow-2xl shadow-pink-500/50">
         <figure className="p-3">
             <img src="https://placeimg.com/400/225/arch" className="rounded-xl" />
         </figure>
