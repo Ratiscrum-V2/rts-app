@@ -1,7 +1,10 @@
+import axios from "axios";
 import { Link, Outlet } from "react-router-dom";
 import Logo from './images/Ratisexe-logo.png'
 
 export default function App() {
+  
+  axios.defaults.baseURL = "https://api.ratiscrum.tgimenez.fr";
 
   return <main className="flex h-full w-full flex-col overflow-hidden overscroll-none">
 
