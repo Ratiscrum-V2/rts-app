@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import Logo from '../images/Ratisexe-logo.png'
 
-export default function Home() {
+export default function HomePage() {
 
     return <div className='flex flex-col justify-center items-center h-screen gap-2'>
         <img src={Logo} width={300}></img>
