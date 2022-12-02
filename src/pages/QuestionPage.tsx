@@ -34,6 +34,7 @@ export function QuestionPage({ question, onChoice }: { question: Question, onCho
 
         <div className="grow flexcontent-center items-center">
             <p className="text-center font-bold opacity-30 mb-5">Prenez une décision pour voir ce que les autres ont répondus !</p>
+            <p className="text-center font-bold opacity-30 mb-5">Swipez ou cliquez pour faire votre choix !</p>
         </div>
 
     </div>

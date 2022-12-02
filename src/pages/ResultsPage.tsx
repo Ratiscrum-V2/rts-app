@@ -50,6 +50,9 @@ export function ResultsPage({ question, choice, onNextRound }: { question: Quest
             <div className="card bg-base-content drop-shadow-xl w-full grow">
                 <div className="card-body items-center text-center flex-row p-3 gap-3">
                 <div className="chat chat-end">
+                    <div className="chat-header text-black">
+                        Expert santé
+                    </div>
                     <div className="chat-bubble chat-bubble-success">{question.answer}</div>
                 </div>
                 </div>
