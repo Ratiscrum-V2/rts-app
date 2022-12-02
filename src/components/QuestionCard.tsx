@@ -5,7 +5,7 @@ export function QuestionCard({ question, className }: { question: Question, clas
 
     return <div className={"card w-full lg:w-96 bg-base-content shadow-2xl shadow-pink-500/50 select-none " + className}>
         <figure className="p-3">
-            <img src="https://placeimg.com/400/225/arch" className="rounded-xl pointer-events-none" />
+            <img src={`https://api.ratiscrum.tgimenez.fr/files/${question.media}`} className="rounded-xl pointer-events-none" />
         </figure>
         <div className="card-body items-center text-center">
             <h3 className="card-title text-neutral my-auto mb-6">{question.question}</h3>

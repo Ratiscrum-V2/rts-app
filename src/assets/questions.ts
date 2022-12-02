@@ -8,6 +8,7 @@ export const questionsAPI: Question[] = [
             extension : "png",
             mimetype : "image/png"
         },
+        media: 6,
         choices : [
             {
                 name: "Oui",
@@ -30,6 +31,7 @@ export const questionsAPI: Question[] = [
     },
     {
         question: "Un homme me demande une fellation, que fais-je ?",
+        media: 2,
         image : {
             name : "fellation",
             extension : "png",
@@ -57,6 +59,7 @@ export const questionsAPI: Question[] = [
     },
     {
         question: "Nous n'avons pas de préservatif, que faire ?",
+        media: 3,
         image : {
             name : "grotte",
             extension : "png",
@@ -84,6 +87,7 @@ export const questionsAPI: Question[] = [
     },
     {
         question: "Je veux faire un cunilingus avec ma partenaire ?",
+        media:1,
         image : {
             name : "digue",
             extension : "png",
@@ -111,6 +115,7 @@ export const questionsAPI: Question[] = [
     },
     {
         question: "Durant le rapport le préservatif se déchire :",
+        media:9,
         image : {
             name : "urgences",
             extension : "png",
@@ -138,6 +143,7 @@ export const questionsAPI: Question[] = [
     },
     {
         question: "J'ai peur que durant le rapport le préservatif se déchire :",
+        media:5,
         image : {
             name : "lubrifiant",
             extension : "png",
@@ -165,6 +171,7 @@ export const questionsAPI: Question[] = [
     },
     {
         question: "J'ai eu une IST il y a plusieurs années :",
+        media:8,
         image : {
             name : "secret",
             extension : "png",
@@ -197,6 +204,7 @@ export const questionsAPI: Question[] = [
             extension : "png",
             mimetype : "image/png"
         },
+        media: 10,
         choices : [
             {
                 name: "Oui",
@@ -219,6 +227,7 @@ export const questionsAPI: Question[] = [
     },
     {
         question: "Ma partenaire est alergique au latex :",
+        media:4,
         image : {
             name : "latexFree",
             extension : "png",
@@ -251,6 +260,7 @@ export const questionsAPI: Question[] = [
             extension : "png",
             mimetype : "image/png"
         },
+        media:7,
         choices : [
             {
                 name: "Je renonce au rapport",

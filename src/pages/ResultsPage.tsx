@@ -16,7 +16,7 @@ export function ResultsPage({ question, choice, onNextRound }: { question: Quest
             <div className="card bg-base-content drop-shadow-xl w-full">
                 <div className="card-body items-center text-center flex-row p-3 gap-3">
                     <figure className="h-32 w-32">
-                        <img src="https://placeimg.com/400/225/arch" className="rounded-xl" />
+                        <img src={`https://api.ratiscrum.tgimenez.fr/files/${question.media}`} className="rounded-xl" />
                     </figure>
                     <h3 className="card-title text-neutral my-auto flex-1">{question.question}</h3>
                 </div>
@@ -59,7 +59,6 @@ export function ResultsPage({ question, choice, onNextRound }: { question: Quest
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ml-3">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
-
             </button>
         </div>
     </div >

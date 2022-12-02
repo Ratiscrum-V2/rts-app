@@ -5,7 +5,6 @@ import { DayLabel } from "../components/DayLabel";
 import { IndicatorBar } from "../components/IndicatorBar";
 import { Choice } from "../models/choice";
 import { indicators } from "../models/indicators.enum";
-import { exampleQuestion } from "../models/mocks/question.mock";
 import { Question } from "../models/question";
 import { QuestionPage } from "./QuestionPage";
 import { ResultsPage } from "./ResultsPage";
