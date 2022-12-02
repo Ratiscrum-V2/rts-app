@@ -4,10 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App'
 import './index.css'
 import ErrorPage from './pages/ErrorPage';
-import Home from './pages/Home';
-import Game from './pages/Game';
 import { LoginPage } from './pages/authentication/login';
 import { RegisterPage } from './pages/authentication/register';
+import HomePage from './pages/HomePage';
+import GamePage from './pages/GamePage';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />
+        element: <HomePage />
       },
       {
         path: '/login',
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'play/',
-        element: <Game />
+        element: <GamePage />
       }
     ]
   },
