@@ -9,7 +9,7 @@ import { Question } from "../models/question";
 import { QuestionPage } from "./QuestionPage";
 import { ResultsPage } from "./ResultsPage";
 
-export default function GamePage() {
+export default function GamePage(): JSX.Element {
 
     useEffect(() => {
         pickRandomQuestion();
@@ -90,7 +90,7 @@ export default function GamePage() {
         setDayCount(dayCount + 1);
     }
 
-    if(isGameOver || isUserWinned) {
+    if(isGameOver) {
         return <>
             <div className="hero">
                 <div className="hero-content text-center">
@@ -105,8 +105,7 @@ export default function GamePage() {
     }
 
     return <>
-    
-    <div className="grow flex justify-center items-center">
+        <div className="grow flex justify-center items-center">
             <DayLabel day={dayCount}></DayLabel>
         </div>
         <div className="flex flex-col lg:flex-row lg:gap-3 items-center self-center mr-4">
@@ -120,7 +119,5 @@ export default function GamePage() {
                 : <QuestionPage question={question} onChoice={handleChoice}></QuestionPage>
         }
     </>
-
-    return
 
 }
