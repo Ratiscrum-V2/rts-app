@@ -3,3 +3,9 @@ export enum Indicators {
     ENJOYMENT,
     MONEY
 }
+
+export const indicators: Indicators[] = [
+    Indicators.ENJOYMENT,
+    Indicators.HEALTH,
+    Indicators.MONEY,
+]
