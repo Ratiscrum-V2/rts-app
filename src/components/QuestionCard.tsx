@@ -8,8 +8,8 @@ export function QuestionCard({ question }: { question: Question }) {
             <img src="https://placeimg.com/400/225/arch" className="rounded-xl" />
         </figure>
         <div className="card-body items-center text-center">
-            <h3 className="card-title text-neutral my-auto">{question.question}</h3>
+            <h3 className="card-title text-neutral my-auto mb-6">{question.question}</h3>
         </div>
-        <img src={Logo} width={100} className="self-end absolute right-2 bottom-2"></img>
+        <img src={Logo} width={80} className="self-end absolute right-4 bottom-4"></img>
     </div>
 }
