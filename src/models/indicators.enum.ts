@@ -1,5 +1,11 @@
 export enum Indicators {
-    HEALTH,
-    ENJOYMENT,
-    MONEY
+    HEALTH = "sante",
+    ENJOYMENT = "plaisir",
+    MONEY = "argent",
 }
+
+export const indicators: Indicators[] = [
+    Indicators.ENJOYMENT,
+    Indicators.HEALTH,
+    Indicators.MONEY,
+]
