@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
 import { loginRequest, setLocalStorageToken } from "../../services/authentication-service";
+import { toastError } from "../../services/toast-service";
 
 type LoginFormData = {
     email: string;
@@ -21,6 +22,9 @@ export function LoginPage() {
                 axios.defaults.headers.common = {'Authorization': `bearer ${token}`}
                 setLocalStorageToken(token);
                 navigate('/play');
+            })
+            .catch(() => {
+                toastError("Erreur lors de la connexion. Vérifiez vos identifiants ou réesayez plus tard.")
             })
     });
 

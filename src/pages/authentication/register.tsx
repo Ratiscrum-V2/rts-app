@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { registerRequest } from "../../services/authentication-service";
+import { toastError, toastSuccess } from "../../services/toast-service";
 
 type RegisterFormData = {
     email: string;
@@ -18,6 +20,10 @@ export function RegisterPage() {
         registerRequest(data.email, data.password, data.nickname)
             .then(() => {
                 navigate('/login');
+                toastSuccess("Compte créé avec succès ! Connectez-vous maintenant !")
+            })
+            .catch(() => {
+                toastError("Erreur lors de la création du compte. Réessayez plus tard.")
             })
     });
 
