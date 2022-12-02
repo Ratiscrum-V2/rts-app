@@ -1,3 +1,4 @@
+import { useState } from "react";
 import TinderCard from "react-tinder-card";
 import { DayLabel } from "../components/DayLabel";
 import { QuestionCard } from "../components/QuestionCard";
@@ -7,9 +8,7 @@ import { Question } from "../models/question";
 import { Side } from "../models/side.enum";
 
 export function QuestionPage({ question, onChoice }: { question: Question, onChoice: (choice: Choice) => void }) {
-
-    const onSwipe = (direction: any) => {
-        console.log("swipe")
+    const onSwipe = (direction: any) => {      
         if(direction === 'left') {
             console.log("left")
             onChoice(question.choices[0]);
@@ -21,10 +20,6 @@ export function QuestionPage({ question, onChoice }: { question: Question, onCho
     }
 
     return <div className="flex flex-col px-4 pb-1 gap-10 w-full h-full lg:my-10 mx-5 lg:mx-0 overflow-y-auto">
-
-        <div className="grow flex justify-center items-center">
-            <DayLabel day={1}></DayLabel>
-        </div>
 
         <div className="flex flex-col lg:flex-row gap-2 items-center justify-center">
             <QuestionChoice className="order-last lg:order-first" choice={question.choices[0]} side={Side.LEFT} click={() => onChoice(question.choices[0])}></QuestionChoice>

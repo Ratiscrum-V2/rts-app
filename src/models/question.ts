@@ -1,9 +1,13 @@
 import { Choice } from "./choice";
 
 export interface Question {
-    id: number,
+    id?: number,
     question: string,
     answer: string,
-    image: string,
+    image: {
+        name: string; 
+        extension: string;
+        mimetype: string; 
+    },
     choices: Choice[],
 }

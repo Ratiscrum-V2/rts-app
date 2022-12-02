@@ -5,10 +5,12 @@ import { indicators, Indicators } from "../models/indicators.enum";
 import { Question } from "../models/question";
 
 export function ResultsPage({ question, choice, onNextRound }: { question: Question, choice: Choice, onNextRound: () => void }) {
+
+    const randomValue = Math.round(Math.random() * 100);
+
     return <div className="grid lg:grid-cols-2 gap-10 w-full h-full lg:my-10 lg:mx-0 px-4 pb-1 overflow-y-auto">
         <div className="flex flex-col gap-5 grow">
             <div className="flex gap-5 items-start content-center">
-                <DayLabel day={1}></DayLabel>
                 <h3 className="font-bold text-2xl opacity-50">Résultats</h3>
             </div>
             <div className="card bg-base-content drop-shadow-xl w-full">
@@ -37,9 +39,9 @@ export function ResultsPage({ question, choice, onNextRound }: { question: Quest
             <section className="flex flex-col gap-3">
                 <h6 className="uppercase text-lg font-bold opacity-50">Ce que les autres ont choisis</h6>
                 <div className="flex gap-4 items-center">
-                    <p className="font-bold text-xl">60%</p>
-                    <progress className="progress progress-secondary flex-1" value="60" max="100"></progress>
-                    <p className="font-bold text-xl">30%</p>
+                    <p className="font-bold text-xl">{randomValue}%</p>
+                    <progress className="progress progress-secondary flex-1" value={randomValue} max="100"></progress>
+                    <p className="font-bold text-xl">{100-randomValue}%</p>
                 </div>
             </section>
         </div >
@@ -47,7 +49,9 @@ export function ResultsPage({ question, choice, onNextRound }: { question: Quest
             <h3 className="font-bold text-2xl opacity-50">Commentaires</h3>
             <div className="card bg-base-content drop-shadow-xl w-full grow">
                 <div className="card-body items-center text-center flex-row p-3 gap-3">
-
+                <div className="chat chat-end">
+                    <div className="chat-bubble chat-bubble-success">{question.answer}</div>
+                </div>
                 </div>
             </div>
             <button onClick={onNextRound} className="btn btn-accent btn-lg">
