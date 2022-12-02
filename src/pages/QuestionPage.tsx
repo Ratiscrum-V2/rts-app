@@ -9,11 +9,13 @@ import { Side } from "../models/side.enum";
 export function QuestionPage({ question, onChoice }: { question: Question, onChoice: (choice: Choice) => void }) {
 
     const onSwipe = (direction: any) => {
-        console.log("YOU SWIPED " + direction);
+        console.log("swipe")
         if(direction === 'left') {
+            console.log("left")
             onChoice(question.choices[0]);
         }
         if(direction === 'right') {
+            console.log("right")
             onChoice(question.choices[1]);
         }
     }
@@ -27,7 +29,7 @@ export function QuestionPage({ question, onChoice }: { question: Question, onCho
         <div className="flex flex-col lg:flex-row gap-2 items-center justify-center">
             <QuestionChoice className="order-last lg:order-first" choice={question.choices[0]} side={Side.LEFT} click={() => onChoice(question.choices[0])}></QuestionChoice>
             <TinderCard 
-                onSwipe={onSwipe}
+                onSwipe={(direction) => {onSwipe(direction)}}
                 preventSwipe={['up', 'down']}
                 swipeRequirementType="position"
                 swipeThreshold={window.innerWidth * 0.15}

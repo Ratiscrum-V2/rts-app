@@ -9,17 +9,17 @@ export const exampleQuestion: Question = {
         {
             name: 'Ceci',
             effects: {
-                0: 12,
-                1: -2,
-                2: 3,
+                plaisir: 10,
+                sante: -2,
+                argent: 3,
             }
         },
         {
             name: 'Cela',
             effects: {
-                0: 12,
-                1: -2,
-                2: 3,
+                plaisir: -10,
+                sante: 2,
+                argent: -3,
             }
         }
     ],
